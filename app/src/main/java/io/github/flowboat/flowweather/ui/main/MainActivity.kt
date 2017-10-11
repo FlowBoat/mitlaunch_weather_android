@@ -15,6 +15,7 @@ import io.github.flowboat.flowweather.ui.base.activity.BaseActivity
 import io.github.flowboat.flowweather.ui.home.HomeFragment
 import io.github.flowboat.flowweather.ui.setting.SettingsActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.toolbar.*
 import kotlinx.android.synthetic.main.toolbar.view.*
 
 /**
@@ -42,7 +43,7 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
 
         // Handle Toolbar
-        setupToolbar(toolbar_layout.toolbar, backNavigation = false)
+        setupToolbar(toolbar, backNavigation = false)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp)
 
         // Set behavior of Navigation drawer
