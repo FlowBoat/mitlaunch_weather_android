@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlinx-serialization'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "io.github.flowboat.flowweather"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    //Load libs from libs folder
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Testing
+    testCompile 'junit:junit:4.12'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    //Appcompat
+    def compat_version = '26.1.0'
+    compile "com.android.support:appcompat-v7:$compat_version"
+    compile "com.android.support:design:$compat_version"
+
+    //Multidex
+    compile 'com.android.support:multidex:1.0.1'
+
+    //Logging
+    compile 'com.jakewharton.timber:timber:4.5.1'
+
+    //Kotlin
+    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    //Serialization
+    compile "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serialization_version"
+
+    //DI
+    def kodein_version = '4.1.0'
+    compile "com.github.salomonbrys.kodein:kodein:$kodein_version"
+    compile "com.github.salomonbrys.kodein:kodein-conf:$kodein_version"
+
+    //Icon support
+    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
+
+    //Shared prefs
+    compile 'com.f2prateek.rx.preferences2:rx-preferences:2.0.0-RC3'
+
+    //MVP
+    def nucleus_version = '5.0.0-beta1'
+    compile "info.android15.nucleus5:nucleus:$nucleus_version"
+    compile "info.android15.nucleus5:nucleus-support-v4:$nucleus_version"
+    compile "info.android15.nucleus5:nucleus-support-v7:$nucleus_version"
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://kotlin.bintray.com/kotlinx" }
+    maven { url "https://maven.google.com" }
+}

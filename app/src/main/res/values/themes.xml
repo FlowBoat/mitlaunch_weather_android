@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base theme -->
+    <style name="Theme"/>
+
+    <!-- Light theme -->
+    <style name="Theme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Colors -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccentLight</item>
+
+        <!-- Themes -->
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionBarTheme">@style/Theme.ActionBar.Light</item>
+        <item name="alertDialogTheme">@style/Theme.AlertDialog.Light</item>
+
+        <!-- Activity background -->
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:colorBackground">@color/windowBackground</item>
+    </style>
+
+    <!-- Default theme -->
+    <style name="Theme.FlowWeather" parent="Theme.Base">
+        <!-- Attributes specific for SDK 16 to SDK 20 -->
+    </style>
+
+    <!-- Branded launch -->
+    <style name="Theme.BrandedLaunch">
+        <item name="android:windowBackground">@drawable/branded_logo</item>
+    </style>
+</resources>
