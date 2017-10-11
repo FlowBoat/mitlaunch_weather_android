@@ -14,7 +14,6 @@ import io.github.flowboat.flowweather.data.preference.PreferencesHelper
 import io.github.flowboat.flowweather.ui.base.activity.BaseActivity
 import io.github.flowboat.flowweather.ui.home.HomeFragment
 import io.github.flowboat.flowweather.ui.setting.SettingsActivity
-import io.github.flowboat.flowweather.util.toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.view.*
 
