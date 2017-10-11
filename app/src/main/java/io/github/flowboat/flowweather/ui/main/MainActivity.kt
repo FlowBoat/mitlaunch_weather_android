@@ -16,7 +16,6 @@ import io.github.flowboat.flowweather.ui.home.HomeFragment
 import io.github.flowboat.flowweather.ui.setting.SettingsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
-import kotlinx.android.synthetic.main.toolbar.view.*
 
 /**
  * Main activity
