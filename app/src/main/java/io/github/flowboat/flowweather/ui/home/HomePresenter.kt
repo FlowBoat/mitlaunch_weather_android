@@ -21,6 +21,8 @@ class HomePresenter: BasePresenter<HomeFragment>() {
             testSubject.onNext(SensorSendStatus.Active(message))
         }
 
+        status("Sending report...")
+
         val sensorMap = sensorData.map { (s, v) ->
             val serSensor = s.toSerializable()
             val serValue = SerializableSensorValues(v.asList())
