@@ -4,6 +4,7 @@ import android.app.Application
 import com.github.salomonbrys.kodein.Kodein
 import com.github.salomonbrys.kodein.bind
 import com.github.salomonbrys.kodein.singleton
+import io.github.flowboat.flowweather.api.ApiManager
 import io.github.flowboat.flowweather.data.preference.PreferencesHelper
 
 /**
@@ -16,6 +17,7 @@ class AppModule {
     companion object {
         fun create(app: Application) = Kodein.Module {
             bind<PreferencesHelper>() with singleton { PreferencesHelper(app) }
+            bind<ApiManager>() with singleton { ApiManager() }
         }
     }
 }

@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlinx-serialization'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlinx-serialization'
 
 android {
     compileSdkVersion 26
@@ -38,6 +38,9 @@ dependencies {
     compile "com.android.support:appcompat-v7:$compat_version"
     compile "com.android.support:design:$compat_version"
 
+    //ConstraintLayout
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
     //Multidex
     compile 'com.android.support:multidex:1.0.1'
 
@@ -61,6 +64,22 @@ dependencies {
 
     //Shared prefs
     compile 'com.f2prateek.rx.preferences2:rx-preferences:2.0.0-RC3'
+
+    //RxJava 2 Android helpers
+    def autodispose_version = "0.3.0"
+    compile "com.uber.autodispose:autodispose:$autodispose_version"
+    compile "com.uber.autodispose:autodispose-android:$autodispose_version"
+    compile "com.uber.autodispose:autodispose-android-archcomponents:$autodispose_version"
+    compile "com.uber.autodispose:autodispose-kotlin:$autodispose_version"
+
+    //Coroutines
+    def kcoroutines_version = "0.19.1"
+    compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kcoroutines_version"
+    compile "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$kcoroutines_version"
+    compile "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kcoroutines_version"
+
+    //HTTP
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
 
     //MVP
     def nucleus_version = '5.0.0-beta1'

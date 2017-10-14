@@ -2,6 +2,7 @@ package io.github.flowboat.flowweather.util
 
 import android.app.Notification
 import android.content.Context
+import android.hardware.SensorManager
 import android.support.annotation.StringRes
 import android.support.v4.app.NotificationCompat
 import android.view.LayoutInflater
@@ -48,3 +49,6 @@ inline fun Context.notification(func: NotificationCompat.Builder.() -> Unit): No
  */
 val Context.layoutInflater: LayoutInflater
     get() = this.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+
+val Context.sensors: SensorManager
+    get() = this.getSystemService(Context.SENSOR_SERVICE) as SensorManager

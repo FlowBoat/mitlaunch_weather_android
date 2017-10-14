@@ -27,7 +27,7 @@ class MainActivity : BaseActivity() {
 
     val preferences: PreferencesHelper by Kodein.global.lazy.instance()
 
-    val startScreenId = 1 //TODO Allow customization of this value
+    val startScreenId = R.id.nav_drawer_home //TODO Allow customization of this value
 
     override fun onCreate(savedState: Bundle?) {
         setAppTheme()
