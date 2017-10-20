@@ -114,3 +114,6 @@
 -keepclassmembernames class kotlinx.** {
     volatile <fields>;
 }
+
+# Java 8 time
+-keep class org.threeten.bp.** { *; }

@@ -11,47 +11,75 @@ import android.view.ViewGroup
 import com.uber.autodispose.kotlin.autoDisposeWith
 import io.github.flowboat.flowweather.R
 import io.github.flowboat.flowweather.ui.base.fragment.BaseRxFragment
-import io.github.flowboat.flowweather.util.lifecycleScope
 import io.github.flowboat.flowweather.util.sensors
+import io.github.flowboat.flowweather.util.untilDestroyed
 import io.reactivex.android.schedulers.AndroidSchedulers
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.coroutines.experimental.launch
 import nucleus5.factory.RequiresPresenter
-import java.util.concurrent.ConcurrentHashMap
 
 @RequiresPresenter(HomePresenter::class)
 class HomeFragment: BaseRxFragment<HomePresenter>(), SensorEventListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?)
             = inflater.inflate(R.layout.fragment_home, container, false)!!
 
-    private val sensorData = ConcurrentHashMap<Sensor, FloatArray>()
-
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         //TODO strings.xml
         setToolbarTitle("Home")
 
         btn_send.setOnClickListener {
-            sendSensorData()
+            btnSendClick()
         }
 
-        presenter.testSubject
+        btn_force_snapshot.setOnClickListener {
+            forceSnapshot()
+        }
+
+        presenter.stateSubject
                 .observeOn(AndroidSchedulers.mainThread())
-                .autoDisposeWith(lifecycleScope())
+                .autoDisposeWith(untilDestroyed())
                 .subscribe {
-                    if(it is SensorSendStatus.Inactive) {
-                        progress_send.visibility = View.GONE
-                        btn_send.visibility = View.VISIBLE
-                    } else {
-                        progress_send.visibility = View.VISIBLE
-                        btn_send.visibility = View.GONE
+                    when(it) {
+                        is SensorStatus.Inactive -> {
+                            btn_send.visibility = View.VISIBLE
+                            btn_send.text = "Start Recording" //TODO strings.xml
+                            btn_force_snapshot.visibility = View.GONE
+                            progress_send.visibility = View.GONE
+                        }
+                        is SensorStatus.Recording -> {
+                            btn_send.visibility = View.VISIBLE
+                            btn_send.text = "Stop and send recording" //TODO strings.xml
+                            btn_force_snapshot.visibility = View.VISIBLE
+                            progress_send.visibility = View.GONE
+                        }
+                        is SensorStatus.Sending -> {
+                            btn_send.visibility = View.GONE
+                            btn_force_snapshot.visibility = View.GONE
+                            progress_send.visibility = View.VISIBLE
+                        }
                     }
+                }
+
+        presenter.statusSubject
+                .observeOn(AndroidSchedulers.mainThread())
+                .autoDisposeWith(untilDestroyed())
+                .subscribe {
+                    text_status.text = it
                 }
     }
 
-    fun sendSensorData() {
+    fun btnSendClick() {
         launch {
-            presenter.sendSensorData(sensorData)
+            when(presenter.stateSubject.value ?: SensorStatus.Inactive()) {
+                is SensorStatus.Inactive -> presenter.startRecording()
+                is SensorStatus.Recording -> presenter.saveRecording()
+                is SensorStatus.Sending -> {}
+            }
         }
+    }
+
+    fun forceSnapshot() {
+        presenter.takeSnapshot()
     }
 
     override fun onStart() {
@@ -69,7 +97,7 @@ class HomeFragment: BaseRxFragment<HomePresenter>(), SensorEventListener {
     }
 
     override fun onSensorChanged(event: SensorEvent) {
-        sensorData.put(event.sensor, event.values)
+        presenter.recordData(event.sensor, event.values)
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}

@@ -86,6 +86,9 @@ dependencies {
     compile "info.android15.nucleus5:nucleus:$nucleus_version"
     compile "info.android15.nucleus5:nucleus-support-v4:$nucleus_version"
     compile "info.android15.nucleus5:nucleus-support-v7:$nucleus_version"
+
+    //Java 8 Time
+    compile 'com.jakewharton.threetenabp:threetenabp:1.0.5'
 }
 
 repositories {
