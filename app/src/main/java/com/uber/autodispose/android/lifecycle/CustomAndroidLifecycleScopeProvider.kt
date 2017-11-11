@@ -16,6 +16,7 @@
 
 package com.uber.autodispose.android.lifecycle
 
+import android.annotation.SuppressLint
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleOwner
 import com.uber.autodispose.LifecycleEndedException
@@ -38,11 +39,13 @@ class CustomAndroidLifecycleScopeProvider : LifecycleScopeProvider<Lifecycle.Eve
 
     private val lifecycleObservable: LifecycleEventsObservable
 
+    @SuppressLint("RestrictedApi")
     private constructor(lifecycle: Lifecycle) {
         this.lifecycleObservable = LifecycleEventsObservable(lifecycle)
         this.correspondingEvents = DEFAULT_CORRESPONDING_EVENTS
     }
 
+    @SuppressLint("RestrictedApi")
     private constructor(lifecycle: Lifecycle, untilEvent: Lifecycle.Event) {
         this.lifecycleObservable = LifecycleEventsObservable(lifecycle)
         this.correspondingEvents = UntilEventFunction(untilEvent)
@@ -56,6 +59,7 @@ class CustomAndroidLifecycleScopeProvider : LifecycleScopeProvider<Lifecycle.Eve
         return correspondingEvents
     }
 
+    @SuppressLint("RestrictedApi")
     override fun peekLifecycle(): Lifecycle.Event? {
         return lifecycleObservable.value
     }
