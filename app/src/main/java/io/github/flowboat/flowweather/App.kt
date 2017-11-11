@@ -20,7 +20,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         //Android time support
-        AndroidThreeTen.init(this);
+        AndroidThreeTen.init(this)
 
         //Setup logging
         if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
