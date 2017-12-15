@@ -30,70 +30,73 @@ android {
 
 dependencies {
     //Load libs from libs folder
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     //Testing
-    testCompile 'junit:junit:4.12'
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
     //Appcompat
     def compat_version = '26.1.0'
-    compile "com.android.support:appcompat-v7:$compat_version"
-    compile "com.android.support:design:$compat_version"
+    implementation "com.android.support:appcompat-v7:$compat_version"
+    implementation "com.android.support:design:$compat_version"
 
     //ConstraintLayout
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
     //Multidex
-    compile 'com.android.support:multidex:1.0.2'
+    implementation 'com.android.support:multidex:1.0.2'
 
     //Logging
-    compile 'com.jakewharton.timber:timber:4.6.0'
+    implementation 'com.jakewharton.timber:timber:4.6.0'
 
     //Kotlin
-    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
     //Serialization
-    compile "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serialization_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serialization_version"
 
     //DI
     def kodein_version = '4.1.0'
-    compile "com.github.salomonbrys.kodein:kodein:$kodein_version"
-    compile "com.github.salomonbrys.kodein:kodein-conf:$kodein_version"
+    implementation "com.github.salomonbrys.kodein:kodein:$kodein_version"
+    implementation "com.github.salomonbrys.kodein:kodein-conf:$kodein_version"
 
     //Icon support
-    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
+    implementation 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
 
     //Shared prefs
-    compile 'com.f2prateek.rx.preferences2:rx-preferences:2.0.0-RC3'
+    implementation 'com.f2prateek.rx.preferences2:rx-preferences:2.0.0-RC3'
 
     //RxJava 2 Android helpers
     def autodispose_version = "0.3.0"
-    compile "com.uber.autodispose:autodispose:$autodispose_version"
-    compile "com.uber.autodispose:autodispose-android:$autodispose_version"
-    compile "com.uber.autodispose:autodispose-android-archcomponents:$autodispose_version"
-    compile "com.uber.autodispose:autodispose-kotlin:$autodispose_version"
+    implementation "com.uber.autodispose:autodispose:$autodispose_version"
+    implementation "com.uber.autodispose:autodispose-android:$autodispose_version"
+    implementation "com.uber.autodispose:autodispose-android-archcomponents:$autodispose_version"
+    implementation "com.uber.autodispose:autodispose-kotlin:$autodispose_version"
 
     //Coroutines
     def kcoroutines_version = "0.19.1"
-    compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kcoroutines_version"
-    compile "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$kcoroutines_version"
-    compile "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kcoroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kcoroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$kcoroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kcoroutines_version"
 
     //HTTP
-    compile 'com.squareup.okhttp3:okhttp:3.9.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
 
     //MVP
     def nucleus_version = '5.0.0-beta1'
-    compile "info.android15.nucleus5:nucleus:$nucleus_version"
-    compile "info.android15.nucleus5:nucleus-support-v4:$nucleus_version"
-    compile "info.android15.nucleus5:nucleus-support-v7:$nucleus_version"
+    implementation "info.android15.nucleus5:nucleus:$nucleus_version"
+    implementation "info.android15.nucleus5:nucleus-support-v4:$nucleus_version"
+    implementation "info.android15.nucleus5:nucleus-support-v7:$nucleus_version"
 
     //Java 8 Time
-    compile 'com.jakewharton.threetenabp:threetenabp:1.0.5'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.0.5'
+
+    //Step-by-step stuff
+    implementation 'com.stepstone.stepper:material-stepper:4.3.1'
 }
 
 repositories {
