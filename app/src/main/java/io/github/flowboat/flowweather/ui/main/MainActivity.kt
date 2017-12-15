@@ -11,6 +11,7 @@ import com.github.salomonbrys.kodein.instance
 import com.github.salomonbrys.kodein.lazy
 import io.github.flowboat.flowweather.R
 import io.github.flowboat.flowweather.data.preference.PreferencesHelper
+import io.github.flowboat.flowweather.ui.adebug.ADebugFragment
 import io.github.flowboat.flowweather.ui.base.activity.BaseActivity
 import io.github.flowboat.flowweather.ui.home.HomeFragment
 import io.github.flowboat.flowweather.ui.setting.SettingsActivity
@@ -54,6 +55,7 @@ class MainActivity : BaseActivity() {
             //TODO Implement
             when (id) {
                 R.id.nav_drawer_home -> setFragment(HomeFragment.newInstance(), id)
+                R.id.nav_drawer_adebug -> setFragment(ADebugFragment.newInstance(), id)
                 R.id.nav_drawer_settings -> {
                     val intent = Intent(this, SettingsActivity::class.java)
                     startActivityForResult(intent, REQUEST_OPEN_SETTINGS)

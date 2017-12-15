@@ -21,6 +21,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            java.srcDirs += "src/main/libhw"
+        }
+    }
 }
 
 dependencies {
@@ -42,10 +47,10 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
     //Multidex
-    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:multidex:1.0.2'
 
     //Logging
-    compile 'com.jakewharton.timber:timber:4.5.1'
+    compile 'com.jakewharton.timber:timber:4.6.0'
 
     //Kotlin
     compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
@@ -79,7 +84,7 @@ dependencies {
     compile "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kcoroutines_version"
 
     //HTTP
-    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.squareup.okhttp3:okhttp:3.9.1'
 
     //MVP
     def nucleus_version = '5.0.0-beta1'
