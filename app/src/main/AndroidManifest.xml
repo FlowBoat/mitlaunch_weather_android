@@ -23,6 +23,8 @@
             </intent-filter>
         </activity>
 
+        <!-- TODO Strings.xml -->
+
         <activity
             android:name=".ui.setting.SettingsActivity"
             android:label="Settings"

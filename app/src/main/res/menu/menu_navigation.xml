@@ -12,6 +12,11 @@
             android:id="@+id/nav_drawer_adebug"
             android:icon="@drawable/ic_home_black_24dp"
             android:title="ArduinoDebug" />
+        <item
+            android:checked="true"
+            android:id="@+id/nav_drawer_bridgeui"
+            android:icon="@drawable/ic_cloud_upload_black_24dp"
+            android:title="Upload data" />
     </group>
     <group android:id="@+id/group_settings"
         android:checkableBehavior="single">

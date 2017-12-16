@@ -9,3 +9,6 @@ fun Fragment.lifecycleScope()
 
 fun Fragment.untilDestroyed()
         = CustomAndroidLifecycleScopeProvider.from(this, Lifecycle.Event.ON_DESTROY)
+
+fun Fragment.untilStopped()
+        = CustomAndroidLifecycleScopeProvider.from(this, Lifecycle.Event.ON_STOP)
