@@ -16,11 +16,7 @@ class BridgeUIPresenter: BasePresenter<BridgeUIFragment>() {
     private val usbLock = ReentrantLock()
     private val continuePolling = AtomicBoolean(false)
     private var conn: Physicaloid? = null
-    val status = BehaviorSubject.createDefault<UploadStatus>(UploadStatus.Inactive())
-    
-    override fun onCreate(savedState: Bundle?) {
-        super.onCreate(savedState)
-    }
+    val status = BehaviorSubject.createDefault<UploadStatus>(UploadStatus.Inactive())!!
     
     fun beginUsbPoll(context: Context) {
         //Check if already polling

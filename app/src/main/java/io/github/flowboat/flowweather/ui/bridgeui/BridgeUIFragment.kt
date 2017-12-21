@@ -25,6 +25,7 @@ class BridgeUIFragment: BaseRxFragment<BridgeUIPresenter>() {
         super.onStart()
         presenter.beginUsbPoll(this.context)
     
+        //TODO change text to match icons
         presenter.status.observeOn(AndroidSchedulers.mainThread())
                 .autoDisposeWith(untilStopped())
                 .subscribe {
