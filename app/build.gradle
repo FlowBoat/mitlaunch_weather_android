@@ -4,12 +4,12 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlinx-serialization'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.2'
     defaultConfig {
         applicationId "io.github.flowboat.flowweather"
         minSdkVersion 15
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -40,7 +40,7 @@ dependencies {
     })
 
     //Appcompat
-    def compat_version = '26.1.0'
+    def compat_version = '27.0.2'
     implementation "com.android.support:appcompat-v7:$compat_version"
     implementation "com.android.support:design:$compat_version"
 
