@@ -1,5 +1,7 @@
 package io.github.flowboat.flowweather.util
 
+import android.support.annotation.LayoutRes
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import timber.log.Timber
@@ -38,3 +40,12 @@ fun ViewGroup.getAllNestedChildren(): List<View> =
     this.iterable().flatMap {
         listOf(it) + ((it as? ViewGroup)?.getAllNestedChildren() ?: emptyList())
     }
+
+/**
+ * Extension method to inflate a view directly from its parent.
+ * @param layout the layout to inflate.
+ * @param attachToRoot whether to attach the view to the root or not. Defaults to false.
+ */
+fun ViewGroup.inflate(@LayoutRes layout: Int, attachToRoot: Boolean = false): View {
+    return LayoutInflater.from(context).inflate(layout, this, attachToRoot)
+}

@@ -37,12 +37,8 @@ class VolatileDW : AbstractFlexibleItem<DWHolder>() {
         if (day != other.day) return false
         if (high != other.high) return false
         if (low != other.low) return false
-        if (noonTemp != other.noonTemp) return false
         if (precip != other.precip) return false
-        if (wind != other.wind) return false
-        if (humidity != other.humidity) return false
-        if (pressure != other.pressure) return false
-        if (airQuality != other.airQuality) return false
+        if (data != other.data) return false
         if (warnings != other.warnings) return false
 
         return true
@@ -52,12 +48,8 @@ class VolatileDW : AbstractFlexibleItem<DWHolder>() {
         var result = day?.hashCode() ?: 0
         result = 31 * result + (high ?: 0)
         result = 31 * result + (low ?: 0)
-        result = 31 * result + (noonTemp ?: 0)
         result = 31 * result + (precip?.hashCode() ?: 0)
-        result = 31 * result + (wind?.hashCode() ?: 0)
-        result = 31 * result + (humidity?.hashCode() ?: 0)
-        result = 31 * result + (pressure ?: 0)
-        result = 31 * result + (airQuality?.hashCode() ?: 0)
+        result = 31 * result + (data?.hashCode() ?: 0)
         result = 31 * result + (warnings?.hashCode() ?: 0)
         return result
     }
@@ -68,17 +60,18 @@ class VolatileDW : AbstractFlexibleItem<DWHolder>() {
 
     var low: Int? = null
 
-    var noonTemp: Int? = null
-
     var precip: PrecipEstimation? = null
 
+    /*
     var wind: WindEstimation? = null
 
     var humidity: Float? = null
 
     var pressure: Int? = null
 
-    var airQuality: Float? = null
+    var airQuality: Float? = null*/
+
+    var data: List<DayDataComponent>? = null
 
     var warnings: List<WeatherWarning>? = null
 }
@@ -123,3 +116,6 @@ enum class Direction {
     WS,
     WN
 }
+
+class DayDataComponent(val name: String,
+                       val data: List<Pair<ZonedDateTime, Double>>)
