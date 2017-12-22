@@ -23,7 +23,7 @@ class HomeFragment: BaseRxFragment<HomePresenter>(), SensorEventListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?)
             = inflater.inflate(R.layout.fragment_home, container, false)!!
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         //TODO strings.xml
         setToolbarTitle("Home")
 
@@ -85,15 +85,15 @@ class HomeFragment: BaseRxFragment<HomePresenter>(), SensorEventListener {
     override fun onStart() {
         super.onStart()
 
-        context.sensors.getSensorList(Sensor.TYPE_ALL).forEach {
-            context.sensors.registerListener(this, it, SensorManager.SENSOR_DELAY_FASTEST)
+        context?.sensors?.getSensorList(Sensor.TYPE_ALL)?.forEach {
+            context?.sensors?.registerListener(this, it, SensorManager.SENSOR_DELAY_FASTEST)
         }
     }
 
     override fun onStop() {
         super.onStop()
 
-        context.sensors.unregisterListener(this)
+        context?.sensors?.unregisterListener(this)
     }
 
     override fun onSensorChanged(event: SensorEvent) {

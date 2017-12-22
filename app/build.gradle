@@ -73,7 +73,7 @@ dependencies {
     implementation 'com.f2prateek.rx.preferences2:rx-preferences:2.0.0-RC3'
 
     //RxJava 2 Android helpers
-    def autodispose_version = "0.3.0"
+    def autodispose_version = "0.5.1"
     implementation "com.uber.autodispose:autodispose:$autodispose_version"
     implementation "com.uber.autodispose:autodispose-android:$autodispose_version"
     implementation "com.uber.autodispose:autodispose-android-archcomponents:$autodispose_version"
@@ -102,6 +102,10 @@ dependencies {
 
     //Graphs
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    //Better recyclerview
+    compile 'eu.davidea:flexible-adapter:5.0.0-rc4'
+    compile 'eu.davidea:flexible-adapter-ui:1.0.0-b1'
 }
 
 repositories {
@@ -116,4 +120,7 @@ kotlin {
     experimental {
         coroutines "enable"
     }
+}
+androidExtensions {
+    experimental = true
 }

@@ -36,7 +36,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/stop_btn"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="8dp" />
 
     <Button
         android:id="@+id/stop_btn"
@@ -48,5 +49,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/start_btn" />
+        app:layout_constraintStart_toEndOf="@+id/start_btn"
+        android:layout_marginRight="8dp" />
 </android.support.constraint.ConstraintLayout>

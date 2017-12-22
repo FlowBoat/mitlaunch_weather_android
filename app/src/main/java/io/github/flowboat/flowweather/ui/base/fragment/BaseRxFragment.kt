@@ -15,8 +15,9 @@ abstract class BaseRxFragment<P : BasePresenter<*>> : NucleusSupportFragment<P>(
         val superFactory = presenterFactory
         setPresenterFactory {
             superFactory.createPresenter().apply {
-                val app = activity.application as App
-                context = app.applicationContext
+                (activity?.application)?.let {
+                    context = it.applicationContext
+                }
             }
         }
         super.onCreate(savedState)

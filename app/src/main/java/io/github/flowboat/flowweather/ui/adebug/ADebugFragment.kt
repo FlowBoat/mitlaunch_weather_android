@@ -19,15 +19,15 @@ class ADebugFragment: BaseRxFragment<ADebugPresenter>() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?)
             = inflater.inflate(R.layout.fragment_adebug, container, false)!!
     
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         //TODO strings.xml
         setToolbarTitle("Arduino debug menu")
         
         start_btn.setOnClickListener {
             try {
-                presenter.startDebug(context)
+                presenter.startDebug(view.context)
             } catch(e: Exception) {
-                context.toast("Something broke: " + e.message, Toast.LENGTH_SHORT)
+                view.context.toast("Something broke: " + e.message, Toast.LENGTH_SHORT)
             }
         }
         

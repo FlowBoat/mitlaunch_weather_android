@@ -23,8 +23,10 @@ class BridgeUIFragment: BaseRxFragment<BridgeUIPresenter>() {
     
     override fun onStart() {
         super.onStart()
-        presenter.beginUsbPoll(this.context)
-    
+        context?.let {
+            presenter.beginUsbPoll(it)
+        }
+
         //TODO change text to match icons
         presenter.status.observeOn(AndroidSchedulers.mainThread())
                 .autoDisposeWith(untilStopped())

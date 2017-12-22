@@ -17,7 +17,7 @@ interface FragmentMixin {
         (getActivity() as ActivityMixin).setToolbarTitle(getString(resourceId))
     }
 
-    fun getActivity(): FragmentActivity
+    fun getActivity(): FragmentActivity?
 
     fun getString(resource: Int): String
 }
