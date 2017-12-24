@@ -5,6 +5,7 @@ import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.AbstractFlexibleItem
 import io.github.flowboat.flowweather.R
 import org.threeten.bp.ZonedDateTime
+import java.util.*
 
 class VolatileDW : AbstractFlexibleItem<DWHolder>() {
     /**
@@ -38,7 +39,6 @@ class VolatileDW : AbstractFlexibleItem<DWHolder>() {
         if (high != other.high) return false
         if (low != other.low) return false
         if (precip != other.precip) return false
-        if (data != other.data) return false
         if (warnings != other.warnings) return false
 
         return true
@@ -49,7 +49,6 @@ class VolatileDW : AbstractFlexibleItem<DWHolder>() {
         result = 31 * result + (high ?: 0)
         result = 31 * result + (low ?: 0)
         result = 31 * result + (precip?.hashCode() ?: 0)
-        result = 31 * result + (data?.hashCode() ?: 0)
         result = 31 * result + (warnings?.hashCode() ?: 0)
         return result
     }
@@ -70,8 +69,6 @@ class VolatileDW : AbstractFlexibleItem<DWHolder>() {
     var pressure: Int? = null
 
     var airQuality: Float? = null*/
-
-    var data: List<DayDataComponent>? = null
 
     var warnings: List<WeatherWarning>? = null
 }
@@ -118,4 +115,4 @@ enum class Direction {
 }
 
 class DayDataComponent(val name: String,
-                       val data: List<Pair<ZonedDateTime, Double>>)
+                       val data: SortedMap<ZonedDateTime, Double>)
