@@ -27,26 +27,19 @@ class DWFragment : BaseRxFragment<DWPresenter>() {
         data_recycler.layoutManager = LinearLayoutManager(view.context)
 
         //TODO Use real data
-        val VOLATILE_DW = listOf<VolatileDW>(
-                VolatileDW().apply {
-                    day = ZonedDateTime.now()
-                    precip = PrecipEstimation.CLOUDY
-                    high = -3
-                    low = -8
-                },
-                VolatileDW().apply {
-                    day = ZonedDateTime.now()
-                    precip = PrecipEstimation.DOWNPOUR
-                    high = 0
-                    low = -10
-                },
-                VolatileDW().apply {
-                    day = ZonedDateTime.now()
-                    precip = PrecipEstimation.DRIZZLE
-                    high = 99
-                    low = -99
-                }
-        )
+        val precipList = PrecipEstimation.values().toList()
+        val now = ZonedDateTime.now()
+        val range = -20 .. 20
+        val VOLATILE_DW = (0 .. 5000).map {
+            VolatileDW().apply {
+                day = now.plusDays(it.toLong())
+                precip = precipList.shuffled().first()
+                
+                val tempRange = range.shuffled()
+                high = tempRange[0]
+                low = tempRange[1]
+            }
+        }
 
         val adapter = FlexibleAdapter(VOLATILE_DW)
         data_recycler.adapter = adapter
