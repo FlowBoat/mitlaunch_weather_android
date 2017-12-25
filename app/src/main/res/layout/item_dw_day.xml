@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<io.github.flowboat.flowweather.ui.datawindow.day.DWDayView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,7 +13,8 @@
         android:layout_marginTop="16dp"
         android:text="Graph type:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16dp" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -28,7 +29,7 @@
     <FrameLayout
         android:id="@+id/chart"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
@@ -40,10 +41,10 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/numbers"
-        android:layout_width="368dp"
-        android:layout_height="502dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/chart" />
-</android.support.constraint.ConstraintLayout>
+</io.github.flowboat.flowweather.ui.datawindow.day.DWDayView>

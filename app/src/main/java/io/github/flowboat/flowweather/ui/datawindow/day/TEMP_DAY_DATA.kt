@@ -8,11 +8,16 @@ import java.util.*
 /**
  * Created by nulldev on 12/22/17.
  */
-val TEMP_DAY_DATA = listOf(
-        DayDataComponent("Humidity", fakeDataGen(0 .. 100))
+fun TEMP_DAY_DATA() = listOf(
+        fakeDataGen("Humidity", 0 .. 100),
+        fakeDataGen("Pressure", 87 .. 108),
+        fakeDataGen("Temp", -50 .. 50),
+        fakeDataGen("Wind speed", 0 .. 150),
+        fakeDataGen("Precipitation", 0 .. 100),
+        fakeDataGen("Air quality", 1 .. 10)
 )
 
-private fun fakeDataGen(range: IntRange): SortedMap<ZonedDateTime, Double> {
+private fun fakeDataGen(name: String, range: IntRange): DayDataComponent {
         val map = sortedMapOf<ZonedDateTime, Double>()
 
         val initial = ZonedDateTime.of(2018,
@@ -32,5 +37,5 @@ private fun fakeDataGen(range: IntRange): SortedMap<ZonedDateTime, Double> {
                 current = current.plusHours(1)
         }
 
-        return map
+        return DayDataComponent(name, map, range)
 }

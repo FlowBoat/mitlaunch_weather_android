@@ -27,9 +27,7 @@ class DWDayActivity : BaseRxActivity<DWDayPresenter>() {
         tabs.setupWithViewPager(pager)
 
         //Issue network request for data here
-        val data = TEMP_DAY_DATA
-
-        val adapter = DWDayAdapter(data)
+        val adapter = DWDayAdapter(presenter.getData())
         pager.adapter = adapter
     }
 }

@@ -20,4 +20,6 @@ class DWDayAdapter(val data: List<DayDataComponent>) : RecyclerViewPagerAdapter(
     }
 
     override fun getCount() = data.size
+    
+    override fun getPageTitle(position: Int) = data[position].name
 }

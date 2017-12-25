@@ -115,4 +115,5 @@ enum class Direction {
 }
 
 class DayDataComponent(val name: String,
-                       val data: SortedMap<ZonedDateTime, Double>)
+                       val data: SortedMap<ZonedDateTime, Double>,
+                       val range: IntRange)

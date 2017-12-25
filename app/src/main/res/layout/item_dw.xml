@@ -14,7 +14,8 @@
         android:text="?"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="16dp" />
 
     <TextView
         android:id="@+id/date_text"
@@ -25,7 +26,8 @@
         android:text="Loading..."
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16dp" />
 
     <TextView
         android:id="@+id/precip_text"
@@ -62,5 +64,6 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/low_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/high_text" />
+        app:layout_constraintTop_toTopOf="@+id/high_text"
+        android:layout_marginRight="56dp" />
 </android.support.constraint.ConstraintLayout>

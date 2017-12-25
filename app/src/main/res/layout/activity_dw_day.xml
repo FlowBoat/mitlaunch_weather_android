@@ -21,7 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/Theme.ActionBar.Tab"
-            android:visibility="gone"
             app:tabGravity="center"
             app:tabIndicatorColor="@android:color/white"
             app:tabMinWidth="75dp"
