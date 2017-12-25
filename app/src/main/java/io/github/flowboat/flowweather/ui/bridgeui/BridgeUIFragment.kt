@@ -57,6 +57,8 @@ class BridgeUIFragment: BaseRxFragment<BridgeUIPresenter>() {
                             connect_icon.hide()
                         }
                     }
+                    
+                    state_text.text = it.message
                 }
     }
     
