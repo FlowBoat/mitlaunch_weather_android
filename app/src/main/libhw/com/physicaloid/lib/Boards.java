@@ -65,7 +65,7 @@ public enum Boards {
     public final int    comProtocol;
     public final String text;
 
-    Boards(int support, String idText, int chipType, int uploadProtocol, int uploadBaudrate, int comProtocol, String text) {
+    private Boards(int support, String idText, int chipType, int uploadProtocol, int uploadBaudrate, int comProtocol, String text) {
         this.support        = support;
         this.idText         = idText;
         this.chipType       = chipType;

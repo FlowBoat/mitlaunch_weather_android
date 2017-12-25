@@ -35,7 +35,7 @@ public abstract class UploadProtocol {
     private static final String TAG = UploadProtocol.class.getSimpleName();
 
     UploadCallBack callback;
-    public UploadProtocol(){}
+    public UploadProtocol(){};
 
     public abstract void setSerial(SerialCommunicator comm);
     public abstract void setConfig(AvrConf conf, AVRMem mem);

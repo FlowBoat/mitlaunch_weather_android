@@ -24,8 +24,7 @@ import android.hardware.usb.UsbEndpoint;
 import android.hardware.usb.UsbInterface;
 import android.util.Log;
 import android.util.SparseArray;
-
-import io.github.flowboat.flowweather.BuildConfig;
+import com.physicaloid.BuildConfig;
 
 public class UsbCdcConnection {
     private static final boolean DEBUG_SHOW = true && BuildConfig.DEBUG;
@@ -42,7 +41,7 @@ public class UsbCdcConnection {
         mUsbAccess = UsbAccessor.INSTANCE;
         mUsbAccess.init(context);
         mCdcAcmInterfaceNum = 0;
-        mUsbConnectionEp = new SparseArray<UsbCdcConnection.UsbCdcConnectionEp>();
+        mUsbConnectionEp = new SparseArray<UsbCdcConnectionEp>();
     }
 
     /**
@@ -80,13 +79,16 @@ public class UsbCdcConnection {
                 if(ids.getPid() == 0 || ids.getPid() == usbdev.getProductId()) {
                     for(int intfNum=0; intfNum < usbdev.getInterfaceCount(); intfNum++) {
 
-                        if(!isCdcAcm || (usbdev.getInterface(intfNum).getInterfaceClass() == UsbConstants.USB_CLASS_CDC_DATA)) {
+                        if( (isCdcAcm && (usbdev.getInterface(intfNum).getInterfaceClass() == UsbConstants.USB_CLASS_CDC_DATA))
+                                || !isCdcAcm) {
                             if(ch == chNum) {
                                 if(!mUsbAccess.deviceIsConnected(devNum)) {
                                     if(mUsbAccess.openDevice(devNum,intfNum,ch)) {
                                         if(DEBUG_SHOW){ Log.d(TAG, "Find VID:"+Integer.toHexString(usbdev.getVendorId())+", PID:"+Integer.toHexString(usbdev.getProductId())+", DevNum:"+devNum+", IntfNum:"+intfNum); }
                                         mUsbConnectionEp.put(ch,new UsbCdcConnectionEp(mUsbAccess.connection(ch), getEndpoint(devNum, intfNum, UsbConstants.USB_DIR_IN), getEndpoint(devNum, intfNum, UsbConstants.USB_DIR_OUT)));
-                                        mCdcAcmInterfaceNum = intfNum;
+                                        //mCdcAcmInterfaceNum = intfNum;
+                                        mCdcAcmInterfaceNum = intfNum - 1;
+                                        if (mCdcAcmInterfaceNum < 0) mCdcAcmInterfaceNum = 0;
                                         return true;
                                     }
                                 }

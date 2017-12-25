@@ -18,7 +18,6 @@ package com.physicaloid.lib.programmer.avr;
 
 import cz.jaybee.intelhex.IntelHexParser;
 import cz.jaybee.intelhex.IntelHexParserRun;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -49,13 +48,12 @@ public class IntelHexFileToBuf {
         }
     }
 
-    public void parse(String filePath) throws Exception {
-        InputStream is = null;
-        is = new FileInputStream(filePath);
+    public void parse(String filePath) throws FileNotFoundException, IOException, Exception {
+        InputStream is = new FileInputStream(filePath);
         parse(is);
     }
 
-    public void parse(InputStream is) throws Exception {
+    public void parse(InputStream is) throws FileNotFoundException, IOException, Exception {
 
         ihp = new IntelHexParser(is);
         ihpd = new IntelHexParserRun(0, 0xFFFF);

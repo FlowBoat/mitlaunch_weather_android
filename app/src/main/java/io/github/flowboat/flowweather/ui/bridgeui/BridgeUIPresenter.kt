@@ -24,6 +24,7 @@ class BridgeUIPresenter: BasePresenter<BridgeUIFragment>() {
             return
         
         thread {
+            status.onNext(UploadStatus.Inactive())
             continuePolling.set(true)
             
             usbLock.lock()
@@ -70,18 +71,32 @@ class BridgeUIPresenter: BasePresenter<BridgeUIFragment>() {
         val byteList = mutableListOf<Byte>()
         var lastCheck = -1
         val readArray = ByteArray(4096)
+        var foundFirstEnd = false
         
         reader@while(true) {
             val read = conn.read(readArray)
             byteList += readArray.take(read)
             
             if(read == 0) {
-                for (i in byteList.lastIndex downTo lastCheck + 1) {
+                checker@for (i in byteList.lastIndex downTo lastCheck + 1) {
                     if (byteList[i] == TERM_BYTE) {
-                        for (a in i - 1 downTo i - TERM_LENGTH) {
-                            if (byteList[a] == TERM_BYTE) {
-                                //STOP, term byte reached
+                        var valid = true
+                        
+                        for (a in i - 1 downTo i - TERM_LENGTH + 1) {
+                            if (byteList[a] != TERM_BYTE) {
+                                valid = false
+                                break
+                            }
+                        }
+                        
+                        if(valid) {
+                            //STOP, term byte reached
+                            if(foundFirstEnd) {
                                 break@reader
+                            } else {
+                                //Wait until next set of end bytes to guarantee we received enough data
+                                foundFirstEnd = true
+                                break
                             }
                         }
                     }
@@ -94,11 +109,12 @@ class BridgeUIPresenter: BasePresenter<BridgeUIFragment>() {
     
         status.onNext(UploadStatus.Processing("Parsing data..."))
         val parsed = PacketParser().parse(byteList.toByteArray())
-        
+    
         status.onNext(UploadStatus.Processing("Uploading data..."))
         //TODO Upload byte list
-        
+    
         status.onNext(UploadStatus.Complete())
+        stopUsbPoll()
     }
     
     companion object {

@@ -26,8 +26,7 @@ import android.hardware.usb.UsbInterface;
 import android.hardware.usb.UsbManager;
 import android.util.Log;
 import android.util.SparseArray;
-
-import io.github.flowboat.flowweather.BuildConfig;
+import com.physicaloid.BuildConfig;
 
 /*
  * USB Hierarchy Accessor
@@ -45,7 +44,7 @@ public enum UsbAccessor {
 
     private SparseArray<UsbDeviceConnection> mConnection;
 
-    UsbAccessor() {
+    private UsbAccessor() {
         mConnection = new SparseArray<UsbDeviceConnection>();
     }
 
@@ -155,7 +154,8 @@ public enum UsbAccessor {
      * @return true:connected, false:not connected
      */
     public boolean deviceIsConnected(int devNum) {
-        return connection(devNum) != null;
+        if(connection(devNum) == null) return false;
+        return true;
     }
 
     /**
@@ -254,7 +254,7 @@ public enum UsbAccessor {
 
     /**
      * Gets an USB permission if no permission
-     * 
+     *
      * @param device
      */
     public void getPermission(UsbDevice device) {

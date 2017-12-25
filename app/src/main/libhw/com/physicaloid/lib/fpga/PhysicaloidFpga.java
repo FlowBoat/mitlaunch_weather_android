@@ -1,10 +1,8 @@
 package com.physicaloid.lib.fpga;
 
 import android.content.Context;
-
+import com.physicaloid.BuildConfig;
 import com.physicaloid.lib.Physicaloid;
-
-import io.github.flowboat.flowweather.BuildConfig;
 
 public class PhysicaloidFpga extends Physicaloid {
     @SuppressWarnings("unused")

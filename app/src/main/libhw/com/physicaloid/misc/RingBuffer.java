@@ -17,8 +17,7 @@
 package com.physicaloid.misc;
 
 import android.util.Log;
-
-import io.github.flowboat.flowweather.BuildConfig;
+import com.physicaloid.BuildConfig;
 
 public class RingBuffer{
     private static final String TAG = RingBuffer.class.getSimpleName();

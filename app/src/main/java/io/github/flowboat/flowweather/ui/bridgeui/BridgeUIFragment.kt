@@ -37,29 +37,42 @@ class BridgeUIFragment: BaseRxFragment<BridgeUIPresenter>() {
                             success_icon.hide()
                             fail_icon.hide()
                             connect_icon.show()
+                            state_action.hide()
                         }
                         is UploadStatus.Processing -> {
                             upload_progress.show()
                             success_icon.hide()
                             fail_icon.hide()
                             connect_icon.hide()
+                            state_action.hide()
                         }
                         is UploadStatus.Error -> {
                             upload_progress.hide()
                             success_icon.hide()
                             fail_icon.show()
                             connect_icon.hide()
+                            state_action.show()
+                            state_action.text = "Retry"
                         }
                         is UploadStatus.Complete -> {
                             upload_progress.hide()
                             success_icon.show()
                             fail_icon.hide()
                             connect_icon.hide()
+                            state_action.show()
+                            state_action.text = "Connect to another station"
                         }
                     }
                     
                     state_text.text = it.message
                 }
+        
+        state_action.setOnClickListener {
+            presenter.stopUsbPoll()
+            context?.let {
+                presenter.beginUsbPoll(it)
+            }
+        }
     }
     
     override fun onStop() {

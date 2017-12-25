@@ -89,6 +89,9 @@ class PacketParser {
     }
     
     fun parseData(cursor: ByteCursor) = DataPacket().apply {
+        //Read header
+        cursor.expect(*DataPacket.HEADER)
+        
         time = cursor.nextLong()
         
         rawTemp = cursor.nextShort()

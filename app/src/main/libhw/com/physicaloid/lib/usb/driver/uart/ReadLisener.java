@@ -17,5 +17,5 @@
 package com.physicaloid.lib.usb.driver.uart;
 
 public interface ReadLisener {
-    void onRead(int size);
+    public void onRead(int size);
 }

@@ -2,10 +2,10 @@ package com.physicaloid.misc;
 
 public class Misc {
     static public String toHexStr(byte[] b, int length) {
-        StringBuilder str= new StringBuilder();
+        String str="";
         for(int i=0; i<length; i++) {
-            str.append(String.format("%02x ", b[i]));
+            str += String.format("%02x ", b[i]);
         }
-        return str.toString();
+        return str;
     }
 }

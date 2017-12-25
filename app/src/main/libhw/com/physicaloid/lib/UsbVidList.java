@@ -26,7 +26,7 @@ public enum UsbVidList {
     CP210X                          (0x10C4);
 
     int vid;
-    UsbVidList(int vid) {
+    private UsbVidList(int vid) {
         this.vid = vid;
     }
 
