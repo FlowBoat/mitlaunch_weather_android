@@ -104,11 +104,18 @@ dependencies {
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
 
     //Better recyclerview
-    compile 'eu.davidea:flexible-adapter:5.0.0-rc4'
-    compile 'eu.davidea:flexible-adapter-ui:1.0.0-b1'
+    implementation 'eu.davidea:flexible-adapter:5.0.0-rc4'
+    implementation 'eu.davidea:flexible-adapter-ui:1.0.0-b1'
 
     //Save state in viewpager
-    compile 'com.nightlynexus.viewstatepageradapter:viewstatepageradapter:1.0.4'
+    implementation 'com.nightlynexus.viewstatepageradapter:viewstatepageradapter:1.0.4'
+
+    //Time
+    implementation 'com.github.kizitonwose.time:time-android:1.0.1'
+
+    //Guava
+    implementation 'com.google.guava:guava:23.6-android'
+    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
 }
 
 repositories {

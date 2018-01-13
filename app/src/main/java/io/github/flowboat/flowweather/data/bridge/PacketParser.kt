@@ -79,13 +79,15 @@ class PacketParser {
         //Read header
         cursor.expect(*HeaderPacket.HEADER)
         
-        version = cursor.nextShort()
+        version = cursor.fakeNextShortInt()
         
         deviceId = cursor.nextInt()
         
         deviceTime = cursor.nextLong()
         
-        error = cursor.nextShort()
+        error = cursor.fakeNextShortInt()
+        
+        dataCount = cursor.nextInt()
     }
     
     fun parseData(cursor: ByteCursor) = DataPacket().apply {
@@ -94,12 +96,12 @@ class PacketParser {
         
         time = cursor.nextLong()
         
-        rawTemp = cursor.nextShort()
+        rawTemp = cursor.fakeNextShortInt()
         
-        rawPressure = cursor.nextShort()
+        rawPressure = cursor.fakeNextShortInt()
         
-        rawHumidity = cursor.nextShort()
+        rawHumidity = cursor.fakeNextShortInt()
         
-        rawWindSpeed = cursor.nextShort()
+        rawWindSpeed = cursor.fakeNextShortInt()
     }
 }

@@ -34,7 +34,12 @@ class ByteCursor(val content: ByteArray) {
         return ByteBuffer.wrap(*next(count))
     }
     
-    fun nextShort(): Short = byteBuffer(2).getShort(0)
+    //Epic hack to get an unsigned short properly...
+    fun fakeNextShortInt(): Int = ByteBuffer
+        .wrap(0x00, 0x00, *next(2))
+        .getInt(0)
+    
+    //    fun nextShort(): Short = byteBuffer(2).getShort(0)
     fun nextInt(): Int = byteBuffer(4).getInt(0)
     fun nextLong(): Long = byteBuffer(8).getLong(0)
     fun nextFloat(): Float = byteBuffer(4).getFloat(0)

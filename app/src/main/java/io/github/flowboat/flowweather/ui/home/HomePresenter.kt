@@ -1,22 +1,9 @@
 package io.github.flowboat.flowweather.ui.home
 
-import android.hardware.Sensor
-import android.os.Bundle
-import com.github.salomonbrys.kodein.Kodein
-import com.github.salomonbrys.kodein.conf.global
-import com.github.salomonbrys.kodein.instance
-import com.github.salomonbrys.kodein.lazy
-import io.github.flowboat.flowweather.api.ApiManager
-import io.github.flowboat.flowweather.api.model.sensor.DeviceReport
-import io.github.flowboat.flowweather.api.model.sensor.SensorDataSnapshot
-import io.github.flowboat.flowweather.api.model.sensor.SerializableSensorValues
-import io.github.flowboat.flowweather.api.model.toSerializable
 import io.github.flowboat.flowweather.ui.base.presenter.BasePresenter
-import io.reactivex.subjects.BehaviorSubject
-import org.threeten.bp.ZonedDateTime
-import java.util.concurrent.ConcurrentHashMap
 
 class HomePresenter: BasePresenter<HomeFragment>() {
+    /*
     private val api: ApiManager by Kodein.global.lazy.instance()
     val stateSubject = BehaviorSubject.create<SensorStatus>()
     val statusSubject = BehaviorSubject.create<String>()
@@ -80,7 +67,7 @@ class HomePresenter: BasePresenter<HomeFragment>() {
     companion object {
         //Seconds
         private val DATA_COLLECTION_INTERVAL = 15L
-    }
+    }*/
 }
 
 sealed class SensorStatus {

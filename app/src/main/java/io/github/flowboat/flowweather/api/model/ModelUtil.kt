@@ -1,7 +1,12 @@
 package io.github.flowboat.flowweather.api.model
 
-import android.hardware.Sensor
-import io.github.flowboat.flowweather.api.model.sensor.SerializableSensor
+import io.github.flowboat.flowweather.data.bridge.report.Report
 
-fun Sensor.toSerializable()
-        = SerializableSensor(name, vendor, power)
+fun Report.toSerializable()
+        = DeviceReport(deviceId!!.toLong(), reportTime!!, entries.map {
+    SerializableReportEntry(it.collectionTime!!,
+            it.temp!!.toDouble(),
+            it.pressure!!.toDouble(),
+            it.humidity!!.toDouble(),
+            it.windSpeed!!.toDouble())
+})

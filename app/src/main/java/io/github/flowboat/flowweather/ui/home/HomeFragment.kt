@@ -1,25 +1,15 @@
 package io.github.flowboat.flowweather.ui.home
 
-import android.hardware.Sensor
-import android.hardware.SensorEvent
-import android.hardware.SensorEventListener
-import android.hardware.SensorManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.uber.autodispose.kotlin.autoDisposeWith
 import io.github.flowboat.flowweather.R
 import io.github.flowboat.flowweather.ui.base.fragment.BaseRxFragment
-import io.github.flowboat.flowweather.util.sensors
-import io.github.flowboat.flowweather.util.untilDestroyed
-import io.reactivex.android.schedulers.AndroidSchedulers
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.coroutines.experimental.launch
 import nucleus5.factory.RequiresPresenter
 
 @RequiresPresenter(HomePresenter::class)
-class HomeFragment: BaseRxFragment<HomePresenter>(), SensorEventListener {
+class HomeFragment: BaseRxFragment<HomePresenter>()/*, SensorEventListener */{
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?)
             = inflater.inflate(R.layout.fragment_home, container, false)!!
 
@@ -27,6 +17,7 @@ class HomeFragment: BaseRxFragment<HomePresenter>(), SensorEventListener {
         //TODO strings.xml
         setToolbarTitle("Home")
 
+        /*
         btn_send.setOnClickListener {
             btnSendClick()
         }
@@ -65,9 +56,10 @@ class HomeFragment: BaseRxFragment<HomePresenter>(), SensorEventListener {
                 .autoDisposeWith(untilDestroyed())
                 .subscribe {
                     text_status.text = it
-                }
+                }*/
     }
 
+    /*
     fun btnSendClick() {
         launch {
             when(presenter.stateSubject.value ?: SensorStatus.Inactive()) {
@@ -101,6 +93,7 @@ class HomeFragment: BaseRxFragment<HomePresenter>(), SensorEventListener {
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}
+    */
 
     companion object {
         fun newInstance() = HomeFragment()

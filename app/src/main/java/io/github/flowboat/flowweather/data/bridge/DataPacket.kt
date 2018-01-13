@@ -6,18 +6,18 @@ package io.github.flowboat.flowweather.data.bridge
 class DataPacket: Packet {
     var time: Long = 0
     
-    var rawTemp: Short = 0
+    var rawTemp: Int = 0
     
-    var rawPressure: Short = 0
+    var rawPressure: Int = 0
     
-    var rawHumidity: Short = 0
+    var rawHumidity: Int = 0
     
-    var rawWindSpeed: Short = 0
+    var rawWindSpeed: Int = 0
     
     companion object {
         val HEADER = arrayOf(
                 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
-        ).toIntArray().packBytes()
+        ).packBytes()
         
         val LENGTH = 16
     }
