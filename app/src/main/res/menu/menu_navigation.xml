@@ -22,6 +22,11 @@
             android:id="@+id/nav_drawer_datawindow"
             android:icon="@drawable/ic_assessment_black_24dp"
             android:title="View data" />
+        <item
+            android:checked="false"
+            android:id="@+id/nav_drawer_betabase"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="BetaBase" />
     </group>
     <group android:id="@+id/group_settings"
         android:checkableBehavior="single">
