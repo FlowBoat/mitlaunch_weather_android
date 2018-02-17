@@ -3,7 +3,6 @@ package io.github.flowboat.flowweather.ui.datawindow.day
 import io.github.flowboat.flowweather.ui.datawindow.DayDataComponent
 import org.threeten.bp.ZoneId
 import org.threeten.bp.ZonedDateTime
-import java.util.*
 
 /**
  * Created by nulldev on 12/22/17.
