@@ -5,7 +5,7 @@ apply plugin: 'kotlinx-serialization'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion '27.0.2'
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "io.github.flowboat.flowweather"
         minSdkVersion 15
