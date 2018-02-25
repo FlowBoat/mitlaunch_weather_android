@@ -2,6 +2,7 @@ package io.github.flowboat.flowweather.util
 
 import android.app.Notification
 import android.content.Context
+import android.content.res.Resources
 import android.hardware.SensorManager
 import android.support.annotation.StringRes
 import android.support.v4.app.NotificationCompat
@@ -52,3 +53,15 @@ val Context.layoutInflater: LayoutInflater
 
 val Context.sensors: SensorManager
     get() = this.getSystemService(Context.SENSOR_SERVICE) as SensorManager
+
+/**
+ * Converts to dp.
+ */
+val Int.pxToDp: Int
+    get() = (this / Resources.getSystem().displayMetrics.density).toInt()
+
+/**
+ * Converts to px.
+ */
+val Int.dpToPx: Int
+    get() = (this * Resources.getSystem().displayMetrics.density).toInt()

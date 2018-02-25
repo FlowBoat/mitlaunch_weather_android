@@ -12,6 +12,7 @@ import com.github.salomonbrys.kodein.lazy
 import io.github.flowboat.flowweather.R
 import io.github.flowboat.flowweather.data.preference.PreferencesHelper
 import io.github.flowboat.flowweather.ui.adebug.ADebugFragment
+import io.github.flowboat.flowweather.ui.alphabase.AlphaBaseFragment
 import io.github.flowboat.flowweather.ui.base.activity.BaseActivity
 import io.github.flowboat.flowweather.ui.betabase.BetaBaseFragment
 import io.github.flowboat.flowweather.ui.bridgeui.BridgeUIFragment
@@ -62,6 +63,7 @@ class MainActivity : BaseActivity() {
                 R.id.nav_drawer_bridgeui -> setFragment(BridgeUIFragment.newInstance(), id)
                 R.id.nav_drawer_datawindow -> setFragment(DWFragment.newInstance(), id)
                 R.id.nav_drawer_betabase -> setFragment(BetaBaseFragment.newInstance(), id)
+                R.id.nav_drawer_alphabase -> setFragment(AlphaBaseFragment.newInstance(), id)
                 R.id.nav_drawer_settings -> {
                     val intent = Intent(this, SettingsActivity::class.java)
                     startActivityForResult(intent, REQUEST_OPEN_SETTINGS)

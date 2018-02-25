@@ -117,3 +117,8 @@
 
 # Java 8 time
 -keep class org.threeten.bp.** { *; }
+
+-keep class .R
+-keep class **.R$* {
+    <fields>;
+}

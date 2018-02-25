@@ -19,7 +19,7 @@ class DWHolder(
 
         item.precip?.let {
             precip_text.text = it.displayName
-            icon.text = "{" + it.icon + "}"
+//            icon.text = "{" + it.icon + "}"
         }
 
         item.high?.let {

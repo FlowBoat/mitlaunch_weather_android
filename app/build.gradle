@@ -45,7 +45,7 @@ dependencies {
     implementation "com.android.support:design:$compat_version"
 
     //ConstraintLayout
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0-beta5'
 
     //Multidex
     implementation 'com.android.support:multidex:1.0.2'
@@ -64,10 +64,6 @@ dependencies {
     def kodein_version = '4.1.0'
     implementation "com.github.salomonbrys.kodein:kodein:$kodein_version"
     implementation "com.github.salomonbrys.kodein:kodein-conf:$kodein_version"
-
-    //Icon support
-    implementation 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
-    implementation 'com.joanzapata.iconify:android-iconify-weathericons:2.2.2'
 
     //Shared prefs
     implementation 'com.f2prateek.rx.preferences2:rx-preferences:2.0.0-RC3'
@@ -116,6 +112,23 @@ dependencies {
     //Guava
     implementation 'com.google.guava:guava:23.6-android'
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
+
+    //Weather particles
+    implementation 'com.github.MatteoBattilana:WeatherView:2.0.3'
+
+    //Text animations
+    def htextview_version = "0.1.2"
+    implementation "com.hanks:htextview-base:$htextview_version"
+    implementation "com.hanks:htextview-evaporate:$htextview_version"
+
+    //Icons
+    implementation "com.mikepenz:iconics-core:3.0.3@aar"
+    implementation "com.mikepenz:iconics-views:3.0.3@aar"
+    implementation 'com.mikepenz:meteocons-typeface:1.1.0.4@aar'
+    implementation 'com.mikepenz:weather-icons-typeface:2.0.10.4@aar'
+
+    //Recycler view snap
+    implementation 'com.github.rubensousa:gravitysnaphelper:1.5'
 }
 
 repositories {

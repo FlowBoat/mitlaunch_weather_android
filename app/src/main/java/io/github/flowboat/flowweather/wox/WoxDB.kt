@@ -1,7 +1,12 @@
 package io.github.flowboat.flowweather.wox
 
+import io.github.flowboat.flowweather.ui.datawindow.PrecipEstimation
+import io.github.flowboat.flowweather.ui.datawindow.VolatileDW
+import io.github.flowboat.flowweather.util.random
+
 object WoxDB {
     private val WEATHER_CLASS_MAIN = "main"
+    private val WEATHER_CLASS_PREDICT_MINOR_WARN = "predict"
 
     val anyDb = mutableMapOf<Int, List<String>>()
 
@@ -49,6 +54,63 @@ object WoxDB {
                 after2,
                 clazz,
                 messages.toList())
+    }
+
+    private fun matchVolatileDws(dw: List<VolatileDW>, dayIndex: Int): Map<String, String> {
+        val out = mutableMapOf<String, String>()
+
+        weatherDb.groupBy { it.clazz }.forEach {
+            val result = it.value.find {
+                matchCombo(dw, dayIndex, it)
+            }
+            if(result != null) {
+                val message = result.messages.random()
+                if(message != null)
+                    out[it.key] = message
+            }
+        }
+
+        return out
+    }
+
+    private fun matchCombo(dw: List<VolatileDW>, dayIndex: Int, combo: WoxWeatherCombo): Boolean {
+        val before1 = dw.getOrNull(dayIndex - 2)
+        val before2 = dw.getOrNull(dayIndex - 1)
+        val current = dw.getOrNull(dayIndex)
+        val after1 = dw.getOrNull(dayIndex + 1)
+        val after2 = dw.getOrNull(dayIndex + 2)
+
+        return matchSingleDWState(before1, combo.before1)
+                && matchSingleDWState(before2, combo.before2)
+                && matchSingleDWState(current, combo.current)
+                && matchSingleDWState(after1, combo.after1)
+                && matchSingleDWState(after2, combo.after2)
+    }
+
+    private fun matchSingleDWState(dw: VolatileDW?, combo: WoxWeatherState) : Boolean {
+        if(combo == WoxWeatherState.ANY)
+            return true;
+
+        if(dw == null)
+            return false;
+
+        if((dw.precip == PrecipEstimation.DRIZZLE
+                        || dw.precip == PrecipEstimation.SHOWER
+                        || dw.precip == PrecipEstimation.DOWNPOUR)
+                && combo == WoxWeatherState.RAINY) {
+            return true
+        } else if((dw.precip == PrecipEstimation.NONE)
+                && combo == WoxWeatherState.SUNNY) {
+            return true
+        } else if((dw.precip == PrecipEstimation.SNOWY)
+                && combo == WoxWeatherState.SNOWY) {
+            return true
+        } else if((dw.precip == PrecipEstimation.CLOUDY
+                        || dw.precip == PrecipEstimation.PARTLY_CLOUDY)
+                && combo == WoxWeatherState.CLOUDY) {
+            return true
+        }
+        return false
     }
 
     init {
@@ -127,6 +189,15 @@ object WoxDB {
                 "It's looks like it will snow today",
                 "It's snowy today, dress accordingly",
                 "Look forward to some snowfall today, have a safe commute!"
+        )
+
+        registerWeatherStatement(
+                WoxWeatherState.ANY,
+                WoxWeatherState.RAINY,
+                WoxWeatherState.RAINY,
+                WoxWeatherState.RAINY,
+                WoxWeatherState.ANY,
+                WEATHER_CLASS_PREDICT_MINOR_WARN
         )
     }
 

@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <attr name="navigation_view_theme" format="reference"/>
+    <declare-styleable name="ParallaxImageView">
+        <attr name="motionIntensity" format="float"/>
+        <attr name="motionTiltSensitivity" format="float"/>
+        <attr name="motionScaledIntensity" format="boolean"/>
+    </declare-styleable>
 </resources>

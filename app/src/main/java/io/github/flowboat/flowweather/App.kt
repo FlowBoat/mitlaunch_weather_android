@@ -6,9 +6,6 @@ import android.support.multidex.MultiDex
 import com.github.salomonbrys.kodein.Kodein
 import com.github.salomonbrys.kodein.conf.global
 import com.jakewharton.threetenabp.AndroidThreeTen
-import com.joanzapata.iconify.Iconify
-import com.joanzapata.iconify.fonts.FontAwesomeModule
-import com.joanzapata.iconify.fonts.WeathericonsModule
 import timber.log.Timber
 
 /**
@@ -28,11 +25,6 @@ class App : Application() {
 
         //Setup DI
         Kodein.global.addImport(AppModule.create(this))
-    
-        //Setup Iconify
-        Iconify
-                .with(FontAwesomeModule())
-                .with(WeathericonsModule())
     }
     
     override fun attachBaseContext(base: Context?) {

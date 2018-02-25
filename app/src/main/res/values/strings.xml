@@ -5,4 +5,13 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="detail_precipitation">Precipitation: %s mm</string>
+    <string name="detail_pressure">Pressure: %s kPa</string>
+    <string name="detail_humidity">Humidity: %s %%</string>
+    <string name="detail_air_quality">Air quality: %s</string>
+    <string name="detail_wind_speed">Wind speed: %s km/h</string>
+    <string name="detail_wind_dir">Wind dir: %s</string>
+    <string name="detail_season">Season: %s</string>
+    <string name="detail_uv_index">UV index: %s</string>
 </resources>

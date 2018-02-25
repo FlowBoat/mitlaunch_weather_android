@@ -10,5 +10,5 @@ data class WoxWeatherCombo(
         val after1: WoxWeatherState,
         val after2: WoxWeatherState,
         val clazz: String,
-        val message: List<String>
+        val messages: List<String>
 )
