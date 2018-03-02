@@ -1,0 +1,669 @@
+[
+  {
+    "question": "What causes the rise of Earth’s temperatures?",
+    "answers": {
+      "Cars": false,
+      "Greenhouse gases produced by the environment": false,
+      "Greenhouse gases produced by humans": true,
+      "Factories": false
+    }
+  },
+  {
+    "question": "Over the next century, what is the estimate of the increase in temperatures?",
+    "answers": {
+      "1 degree celsius": false,
+      "2.5 degrees celsius": true,
+      "5 degrees celsius": false,
+      "No change in temperature": false
+    }
+  },
+  {
+    "question": "What is the current rate of change per year in sea levels?",
+    "answers": {
+      "3.2 mm": true,
+      "2.7 mm": false,
+      "1.5 mm": false,
+      "1 mm": false
+    }
+  },
+  {
+    "question": "How does global warming contribute to the rise of our sea levels?",
+    "answers": {
+      "The seas become shallower": false,
+      "It rains more": false,
+      "Glaciers and ice sheets are melting": true,
+      "More fish in the sea": false
+    }
+  },
+  {
+    "question": "How does global warming contribute to our sea levels?",
+    "answers": {
+      "The water expands when getting warmer": true,
+      "People aren’t drinking a lot of water": false,
+      "Too many boats": false,
+      "Oil spills": false
+    }
+  },
+  {
+    "question": "  What was the approximate increase in sea levels from 1870 - 2000?",
+    "answers": {
+      "150 mm": false,
+      "100 mm": false,
+      "350 mm": false,
+      "200 mm": true
+    }
+  },
+  {
+    "question": "What mass of ice was lost from antarctica from 2004 - 2018?",
+    "answers": {
+      "1715.3 Gt": true,
+      "172.53 Gt": false,
+      "200 Gt": false,
+      "1575.7 Gt": false
+    }
+  },
+  {
+    "question": "When does NASA predict that the arctic will essentially be ‘ice-free’",
+    "answers": {
+      "1 century": false,
+      "2 centuries": false,
+      "0.5 Centuries": false,
+      "<0.5 Centuries (Correct)": false
+    }
+  },
+  {
+    "question": "How does global warming affect natural disasters?",
+    "answers": {
+      "Less will occur": false,
+      "Will occur more and be more intense and dangerous (Correct)": false,
+      "Will make them safer": false,
+      "Will cause them to happen on coasts": false
+    }
+  },
+  {
+    "question": "How many major (higher than stage 3) Atlantic hurricanes hit?",
+    "answers": {
+      "5": false,
+      "4": true,
+      "3": false,
+      "1": false
+    }
+  },
+  {
+    "question": "  The health impacts of climate change have costed the US economy how much money each year from 2007 - 2017? At least...",
+    "answers": {
+      "3 million dollars": false,
+      "400 million dollars": false,
+      "500 million dollars": false,
+      "240 billion": false
+    }
+  },
+  {
+    "question": "Hurricane Irma, Harvey, and Maria have costed the US $___.",
+    "answers": {
+      "300 billion": true,
+      "450 million": false,
+      "250 billion": false,
+      "150 billion": false
+    }
+  },
+  {
+    "question": "The $300 billion US spent on Hurricane Harvey, Irma, and Maria is equal to paying the 4-year tuition of ____ college students.",
+    "answers": {
+      "13.5 million": true,
+      "12 million": false,
+      "1 million": false,
+      "20 million": false
+    }
+  },
+  {
+    "question": "In the coming decade, the US is expected to pay at least $____ a year for expenses caused or related to climate change.",
+    "answers": {
+      "300 billion": false,
+      "320 billion": false,
+      "360 billion": true,
+      "200 billion": false
+    }
+  },
+  {
+    "question": "The percentage increase in expenses related to climate change in the US have increased by ____ since the 1980s.",
+    "answers": {
+      "100%": false,
+      "175%": false,
+      "400%": true,
+      "320%": false
+    }
+  },
+  {
+    "question": "  By 2050, temperatures would have increased by ____.",
+    "answers": {
+      "3.5 degrees celsius": false,
+      "2.7 degrees celsius": false,
+      "2.5 degrees celsius": false,
+      "3.6 degrees celsius": true
+    }
+  },
+  {
+    "question": "Doubling renewable energy at its current state would open up _____ jobs",
+    "answers": {
+      "1000": false,
+      "500, 000": true,
+      "67, 500": false,
+      "30, 000": false
+    }
+  },
+  {
+    "question": "At their current state, renewable energy programs in the US would cover ___ of the US’s electricity by 2050.",
+    "answers": {
+      "20%": false,
+      "65%": false,
+      "70%": false,
+      "40%": true
+    }
+  },
+  {
+    "question": "At their current state, renewable energy programs in the US would save the country over $___ billion in costs in air pollution health by 2050.",
+    "answers": {
+      "20": false,
+      "96": false,
+      "97": true,
+      "23": false
+    }
+  },
+  {
+    "question": "At their current state, renewable energy programs in the US would save the country over $___ billion in costs in damage caused by climate change by 2050.",
+    "answers": {
+      "1.6": false,
+      "161": true,
+      "74": false,
+      "86": false
+    }
+  },
+  {
+    "question": "  Even though renewable energy programs in the US will have a tremendous effect on their economy, the Trump Administration has recently taken away the obligation of renewable energy programs.",
+    "answers": {
+      "No way": false,
+      "Are you kidding me": false,
+      "We’re all going to die": false,
+      "All of the above": true
+    }
+  },
+  {
+    "question": "Billions of tax dollars are now going towards the repairing of damages from natural disasters caused by climate change. No need to thank the weather, you can thank yourself for this one.",
+    "answers": {
+      "Oh man": false,
+      "Yikes": false,
+      "We’re all going to die": false,
+      "All of the above": true
+    }
+  },
+  {
+    "question": "At the end of the day, climate change is not just some phenomenon that we hear about in the news every once in a while. It is the reason for many lives lost and, and is the reason your taxes is going up.",
+    "answers": {
+      "True": true
+    }
+  },
+  {
+    "question": "Because oceans absorb the carbon dioxide from the air, they are ____ more acidic than the beginning of the industrial revolution.",
+    "answers": {
+      "20%": false,
+      "15%": false,
+      "12%": false,
+      "30%": true
+    }
+  },
+  {
+    "question": "The 2,300 of the surface of oceans have gotten warmer by 0.3 degrees celsius since 1969.",
+    "answers": {
+      "How wonderful!": false,
+      "That stinks": false,
+      "Man, we’re in trouble": false,
+      "Everything except ‘a’": true
+    }
+  },
+  {
+    "question": "  Snow and ice reflects heat out of the atmosphere, so when when glaciers are melting, get ready for some heat.",
+    "answers": {
+      "If only we knew this when we made cars": false,
+      "Life is hard": false,
+      "We should be thankful that we can still breath right now": false,
+      "All of the above": true
+    }
+  },
+  {
+    "question": "Hurricane harvey costed $____ for the US economy",
+    "answers": {
+      "180 billion": true,
+      "190 billion": false,
+      "100 million": false,
+      "99 million": false
+    }
+  },
+  {
+    "question": "The drought in California in 2015 costed the US $____.",
+    "answers": {
+      "2.5 billion": false,
+      "1.7 billion": false,
+      "2.7 billion": true,
+      "1.2 billion": false
+    }
+  },
+  {
+    "question": "In 2012, hurricane Sandy costed the US $____.",
+    "answers": {
+      "4.2 billion": false,
+      "50 billion": true,
+      "5 billion": false,
+      "6 billion": false
+    }
+  },
+  {
+    "question": "The mississippi river flood costed the US $____.",
+    "answers": {
+      "2 billion": true,
+      "1 billion": false,
+      "0.5 billion": false,
+      "3 billion": false
+    }
+  },
+  {
+    "question": "  Before 1962, the ice caps were melting at a rate of 3.8 cm a year, compared to now, where the rate is approximately 1.6 m per year. Way to go.",
+    "answers": {
+      "We really have to be careful now": true,
+      "There is no hope with global warming": false,
+      "We can’t fix it": false,
+      "We can’t reverse any damage we’ve done": false
+    }
+  },
+  {
+    "question": "Believe it or not, climate change will lead to more expensive food items, since farming with animals and crops is very difficult to do in temperatures over 84 degrees fahrenheit.",
+    "answers": {
+      "Man, we are in a really tough spot": false,
+      "Thanks a lot, humans": false,
+      "I’m going to be more careful now": false,
+      "All of the above": true
+    }
+  },
+  {
+    "question": "Hurricane Irma caused the US to pay $____",
+    "answers": {
+      "100 billion": true,
+      "200 billion": false,
+      "1.25 billion": false,
+      "2 billion": false
+    }
+  },
+  {
+    "question": "In 2016, there were record high temperatures for the _____ year in a row",
+    "answers": {
+      "2nd": false,
+      "3rd": false,
+      "4th": false,
+      "5th": true
+    }
+  },
+  {
+    "question": "In 2017, the Trump Administration released a report saying that the reason for climate change was human activity.",
+    "answers": {
+      "Trump finally did something right": true,
+      "Trump did something right, finally!": true
+    }
+  },
+  {
+    "question": "29% of pollution comes from humans  ______",
+    "answers": {
+      "Generating electricity": true,
+      "Smoking": false,
+      "Farting": false,
+      "Tooting": false
+    }
+  },
+  {
+    "question": "27% of pollution comes from ______",
+    "answers": {
+      "Farting": false,
+      "Tooting": false,
+      "Transportation": true,
+      "Flatulating": false
+    }
+  },
+  {
+    "question": "21% of CO2 emissions come from ______",
+    "answers": {
+      "Factories and industries": false,
+      "Planes and tranes": false,
+      "Cows": false,
+      "Farms": false
+    }
+  },
+  {
+    "question": "  The 1000 biggest factories in the world contribute to about _____ of pollution.",
+    "answers": {
+      "2%": false,
+      "12%": true,
+      "15%": false,
+      "7%": false
+    }
+  },
+  {
+    "question": "From 2012 - 2017, droughts have costed the US economy about $_____.",
+    "answers": {
+      "56 billion": true,
+      "23 million": false,
+      "1 billion": false,
+      "119 billion": false
+    }
+  },
+  {
+    "question": "Approximately $______ worth of housing is at risk due to sea levels rising.",
+    "answers": {
+      "570 billion": false,
+      "300 billion": false,
+      "1 trillion": true,
+      "4 trillion": false
+    }
+  },
+  {
+    "question": "Once released, carbon emissions stay in the atmosphere for about ____",
+    "answers": {
+      "50 years": false,
+      "20 years": false,
+      "75 years": false,
+      "100 years": true
+    }
+  },
+  {
+    "question": "Because of global warming and climate change, about _____ of current species will be extinct over the course of the century",
+    "answers": {
+      "10 - 55%": true,
+      "5 - 25%": false,
+      "3 - 50%": false,
+      "5 - 75%": false
+    }
+  },
+  {
+    "question": "  If all of the Greenland ice sheets were to melt, this would raise sea levels by _____ feet",
+    "answers": {
+      "20": false,
+      "13": false,
+      "17": false,
+      "22": true
+    }
+  },
+  {
+    "question": "In 2015, methane gas (more scientifically referred to as cow farts) was responsible for 10% of pollution. Don’t worry, it wasn’t all our fault.",
+    "answers": {
+      "Thank goodness": false,
+      "There’s a reason to eat cows": false,
+      "We are not completely terrible": false,
+      "All of the above": true
+    }
+  },
+  {
+    "question": "In 1896, a scientist named Svante Arrhenius predicted that if we continued to burn coal and fossil fuels, our world would heat up.",
+    "answers": {
+      "We": true,
+      "Should": true,
+      "Have": true,
+      "Listened": true
+    }
+  },
+  {
+    "question": "In 2017, China contributed to ____ of pollution",
+    "answers": {
+      "27%": false,
+      "29%": true,
+      "30%": false,
+      "26%": false
+    }
+  },
+  {
+    "question": "In 2017, the US contributed to _____ of pollution",
+    "answers": {
+      "14%": false,
+      "16%": false,
+      "15%": true,
+      "17%": false
+    }
+  },
+  {
+    "question": "  The Glacier National Park in Montana was first created in 1910 with originally 150 glaciers, but as of 2010, only ____ glaciers remained.",
+    "answers": {
+      "50": false,
+      "25": true,
+      "100": false,
+      "75": false
+    }
+  },
+  {
+    "question": "Approximately _____ of the pollution we put in the air is absorbed by the ocean",
+    "answers": {
+      "One Half": true,
+      "One Quarter": false,
+      "Two thirds": false,
+      "3 quarters": false
+    }
+  },
+  {
+    "question": "When pollution is absorbed by the oceans it makes them more _____",
+    "answers": {
+      "Basic": false,
+      "Acidic": true,
+      "Corrosive": false,
+      "Pink": false
+    }
+  },
+  {
+    "question": "When water is more acidic, it will destroy ________",
+    "answers": {
+      "The sand": false,
+      "The marine life and plants": true,
+      "Our pride": false,
+      "Beach party plans": false
+    }
+  },
+  {
+    "question": "What organism is affected the most by acidic waters?",
+    "answers": {
+      "Beluga whales": false,
+      "Sharks": false,
+      "Anemones": false,
+      "Coral reefs": true
+    }
+  },
+  {
+    "question": "  In the Fort McMurray wildfire, how many inhabitants needed to be evacuated?",
+    "answers": {
+      "70,000": false,
+      "45,000": false,
+      "80,000": true,
+      "49,000": false
+    }
+  },
+  {
+    "question": "An average of _____ people have been forcibly displaced since 2008 due to climate change-related weather hazards",
+    "answers": {
+      "21.5 million": true,
+      "2 billion": false,
+      "30 thousand": false,
+      "400 thousand": false
+    }
+  },
+  {
+    "question": "Arctic sea ice coverage has shrunk every decade since 1979 by",
+    "answers": {
+      "1.5 to 2.2%": false,
+      "2.2 to 3.5%": false,
+      "3.5 to 4.1%": true,
+      "4.1 to 4.5%": false
+    }
+  },
+  {
+    "question": "In 2017, _____ of the Great Barrier Reef was damaged by water acidity",
+    "answers": {
+      "⅔": true,
+      "¼": false,
+      "⅘": false,
+      "⅗": false
+    }
+  },
+  {
+    "question": "Since the beginning of the industrial revolution, the oceans have become _____ more acidic",
+    "answers": {
+      "13%": false,
+      "4%": false,
+      "30%": false,
+      "26%": true
+    }
+  },
+  {
+    "question": "  From 2017 to 2030, the amount of people that need to evacuate due to flooding conditions is predicted to double;",
+    "answers": {
+      "From 21 - 54 million": true,
+      "From 20,000 - 45,000": false,
+      "From 300,000 - 700,000": false,
+      "From 2 - 4 billion": false
+    }
+  },
+  {
+    "question": "Flooding costs in 2030 are expected to be 5 times more than the costs in 2017;",
+    "answers": {
+      "$65 - $340 billion": true,
+      "$40 - $300 billion": false,
+      "$20 million - $1 billion": false,
+      "$5 billion - $25 billion": false
+    }
+  },
+  {
+    "question": "Since 1958, CO2 levels have been measured from a volcano in ___",
+    "answers": {
+      "Hawaii": true,
+      "Haiti": false,
+      "Japan": false,
+      "Indonesia": false
+    }
+  },
+  {
+    "question": "The United States is the second largest contributor to CO2 in our atmosphere, though it is _____ of the world’s population",
+    "answers": {
+      "5.6%": false,
+      "7%": false,
+      "4.4%": true,
+      "8%": false
+    }
+  },
+  {
+    "question": "Rainforest destruction contributes to climate change. That's because trees store carbon dioxide as they grow. Clearing and burning forests releases large amounts of carbon dioxide into the atmosphere",
+    "answers": {
+      "Oops I didn’t know that": false,
+      "HOw FaNTasTic": false,
+      "Oh man": false,
+      "All of the above": true
+    }
+  },
+  {
+    "question": "  As of 2015, acidity in oceans has caused about _____ of coral reefs to die off",
+    "answers": {
+      "50%": false,
+      "40%": true,
+      "30%": false,
+      "20%": false
+    }
+  },
+  {
+    "question": "_____ is the estimated economic losses to the United States by end of the century if no action is taken on climate change.",
+    "answers": {
+      "$180 billion": true,
+      "$2 trillion": false,
+      "$10 million": false,
+      "$2 million": false
+    }
+  },
+  {
+    "question": "Just 5 countries, which include the United States, contribute to _____ of the world’s climate change",
+    "answers": {
+      "50%": true,
+      "45%": false,
+      "30%": false,
+      "47.5%": false
+    }
+  },
+  {
+    "question": "In 2010, the world produced nearly ____ metric tons of carbon dioxide from fossil-fuel burning, cement production, and gas flaring",
+    "answers": {
+      "34 billion": true,
+      "23 billion": false,
+      "17 billion": false,
+      "6 billion": false
+    }
+  },
+  {
+    "question": "The Arctic regions may have their first completely ice-free summer by _____",
+    "answers": {
+      "2050": false,
+      "2075": false,
+      "2040": true,
+      "2020": false
+    }
+  },
+  {
+    "question": "  In 2015, _____ of the land in the state of California is suffering from drought",
+    "answers": {
+      "99.84%": true,
+      "85.79%": false,
+      "65.34%": false,
+      "98.97%": false
+    }
+  },
+  {
+    "question": "From 1979 - 2003, excessive heat exposure was responsible for _____ premature deaths in the US",
+    "answers": {
+      "900": false,
+      "2,000": false,
+      "3,000": false,
+      "8,000": true
+    }
+  },
+  {
+    "question": "In 2017, Arctic sea ice reached a record low for the third straight running",
+    "answers": {
+      "Oh boy": false,
+      "Ice is melting": false,
+      "And it’s our fault": false,
+      "All of the above": true
+    }
+  },
+  {
+    "question": "Approximately ______ deaths occurred worldwide as a result of weather-related natural disasters in the 1990s",
+    "answers": {
+      "600,000 (Correct)": false,
+      "50,000": false,
+      "7,000": false,
+      "25,000": false
+    }
+  },
+  {
+    "question": "Unstable weather in a short amount of time can lead to…",
+    "answers": {
+      "Hyperthermia or Hypothermia": true,
+      "Lung disease": false,
+      "Cancer": false,
+      "Heart attacks": false
+    }
+  },
+  {
+    "question": "In extreme heat, pollen levels are extremely high, affecting 300 million people with asthma",
+    "answers": {
+      "That’s rough": true
+    }
+  },
+  {
+    "question": "Climate-sensitive diseases are among the largest global killers. Diarrhoea, malaria and protein-energy malnutrition alone caused more than ____ deaths globally in 2004, with over one third of these deaths occurring in Africa",
+    "answers": {
+      "2 million": false,
+      "3 million": true,
+      "4 million": false,
+      "3.5 million": false
+    }
+  }
+]
