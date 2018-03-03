@@ -36,5 +36,6 @@
             android:name=".ui.datawindow.day.DWDayActivity"
             android:label="Data viewer"
             android:parentActivityName=".ui.main.MainActivity" />
+        <activity android:name=".ui.quiz.QuizActivity" />
     </application>
 </manifest>

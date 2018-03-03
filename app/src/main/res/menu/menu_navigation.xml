@@ -32,6 +32,11 @@
             android:id="@+id/nav_drawer_alphabase"
             android:icon="@drawable/ic_home_black_24dp"
             android:title="AlphaBase" />
+        <item
+            android:checked="false"
+            android:id="@+id/nav_drawer_quiz"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:title="Take quiz" />
     </group>
     <group android:id="@+id/group_settings"
         android:checkableBehavior="single">

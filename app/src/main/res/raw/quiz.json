@@ -45,7 +45,7 @@
     }
   },
   {
-    "question": "  What was the approximate increase in sea levels from 1870 - 2000?",
+    "question": "What was the approximate increase in sea levels from 1870 - 2000?",
     "answers": {
       "150 mm": false,
       "100 mm": false,
@@ -63,19 +63,19 @@
     }
   },
   {
-    "question": "When does NASA predict that the arctic will essentially be ‘ice-free’",
+    "question": "When does NASA predict that the arctic will essentially be ‘ice-free’?",
     "answers": {
       "1 century": false,
       "2 centuries": false,
       "0.5 Centuries": false,
-      "<0.5 Centuries (Correct)": false
+      "<0.5 Centuries": true
     }
   },
   {
     "question": "How does global warming affect natural disasters?",
     "answers": {
       "Less will occur": false,
-      "Will occur more and be more intense and dangerous (Correct)": false,
+      "Will occur more and be more intense and dangerous": true,
       "Will make them safer": false,
       "Will cause them to happen on coasts": false
     }
@@ -90,7 +90,7 @@
     }
   },
   {
-    "question": "  The health impacts of climate change have costed the US economy how much money each year from 2007 - 2017? At least...",
+    "question": "The health impacts of climate change have costed the US economy how much money each year from 2007 - 2017? At least...",
     "answers": {
       "3 million dollars": false,
       "400 million dollars": false,
@@ -135,7 +135,7 @@
     }
   },
   {
-    "question": "  By 2050, temperatures would have increased by ____.",
+    "question": "By 2050, temperatures would have increased by ____.",
     "answers": {
       "3.5 degrees celsius": false,
       "2.7 degrees celsius": false,
@@ -180,7 +180,7 @@
     }
   },
   {
-    "question": "  Even though renewable energy programs in the US will have a tremendous effect on their economy, the Trump Administration has recently taken away the obligation of renewable energy programs.",
+    "question": "Even though renewable energy programs in the US will have a tremendous effect on their economy, the Trump Administration has recently taken away the obligation of renewable energy programs.",
     "answers": {
       "No way": false,
       "Are you kidding me": false,
@@ -222,7 +222,7 @@
     }
   },
   {
-    "question": "  Snow and ice reflects heat out of the atmosphere, so when when glaciers are melting, get ready for some heat.",
+    "question": "Snow and ice reflects heat out of the atmosphere, so when when glaciers are melting, get ready for some heat.",
     "answers": {
       "If only we knew this when we made cars": false,
       "Life is hard": false,
@@ -267,7 +267,7 @@
     }
   },
   {
-    "question": "  Before 1962, the ice caps were melting at a rate of 3.8 cm a year, compared to now, where the rate is approximately 1.6 m per year. Way to go.",
+    "question": "Before 1962, the ice caps were melting at a rate of 3.8 cm a year, compared to now, where the rate is approximately 1.6 m per year. Way to go.",
     "answers": {
       "We really have to be careful now": true,
       "There is no hope with global warming": false,
@@ -337,7 +337,7 @@
     }
   },
   {
-    "question": "  The 1000 biggest factories in the world contribute to about _____ of pollution.",
+    "question": "The 1000 biggest factories in the world contribute to about _____ of pollution.",
     "answers": {
       "2%": false,
       "12%": true,
@@ -382,7 +382,7 @@
     }
   },
   {
-    "question": "  If all of the Greenland ice sheets were to melt, this would raise sea levels by _____ feet",
+    "question": "If all of the Greenland ice sheets were to melt, this would raise sea levels by _____ feet",
     "answers": {
       "20": false,
       "13": false,
@@ -427,7 +427,7 @@
     }
   },
   {
-    "question": "  The Glacier National Park in Montana was first created in 1910 with originally 150 glaciers, but as of 2010, only ____ glaciers remained.",
+    "question": "The Glacier National Park in Montana was first created in 1910 with originally 150 glaciers, but as of 2010, only ____ glaciers remained.",
     "answers": {
       "50": false,
       "25": true,
@@ -472,7 +472,7 @@
     }
   },
   {
-    "question": "  In the Fort McMurray wildfire, how many inhabitants needed to be evacuated?",
+    "question": "In the Fort McMurray wildfire, how many inhabitants needed to be evacuated?",
     "answers": {
       "70,000": false,
       "45,000": false,
@@ -517,7 +517,7 @@
     }
   },
   {
-    "question": "  From 2017 to 2030, the amount of people that need to evacuate due to flooding conditions is predicted to double;",
+    "question": "From 2017 to 2030, the amount of people that need to evacuate due to flooding conditions is predicted to double;",
     "answers": {
       "From 21 - 54 million": true,
       "From 20,000 - 45,000": false,
@@ -562,7 +562,7 @@
     }
   },
   {
-    "question": "  As of 2015, acidity in oceans has caused about _____ of coral reefs to die off",
+    "question": "As of 2015, acidity in oceans has caused about _____ of coral reefs to die off",
     "answers": {
       "50%": false,
       "40%": true,
@@ -607,7 +607,7 @@
     }
   },
   {
-    "question": "  In 2015, _____ of the land in the state of California is suffering from drought",
+    "question": "In 2015, _____ of the land in the state of California is suffering from drought",
     "answers": {
       "99.84%": true,
       "85.79%": false,
@@ -636,7 +636,7 @@
   {
     "question": "Approximately ______ deaths occurred worldwide as a result of weather-related natural disasters in the 1990s",
     "answers": {
-      "600,000 (Correct)": false,
+      "600,000": true,
       "50,000": false,
       "7,000": false,
       "25,000": false

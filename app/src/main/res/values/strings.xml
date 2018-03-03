@@ -14,4 +14,9 @@
     <string name="detail_wind_dir">Wind dir: %s</string>
     <string name="detail_season">Season: %s</string>
     <string name="detail_uv_index">UV index: %s</string>
+
+    <string name="quiz_complete_title">QUIZ COMPLETE\n{correct} out of {total} correct</string>
+    <string name="quiz_complete_summary_item"><b>{number}. {title}</b>\nYour choice: {user_choice}\nCorrect answer(s): {answers}\n<b>{result}</b></string>
+    <string name="quiz_item_result_correct"><font color="green">CORRECT</font></string>
+    <string name="quiz_item_result_incorrect"><font color="red">INCORRECT</font></string>
 </resources>

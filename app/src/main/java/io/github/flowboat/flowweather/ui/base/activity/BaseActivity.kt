@@ -1,5 +1,6 @@
 package io.github.flowboat.flowweather.ui.base.activity
 
+import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 
 /**
@@ -12,6 +13,11 @@ abstract class BaseActivity : AppCompatActivity(), ActivityMixin {
 
     var resumed = false
         private set
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        setAppTheme()
+        super.onCreate(savedInstanceState)
+    }
 
     override fun onResume() {
         super.onResume()

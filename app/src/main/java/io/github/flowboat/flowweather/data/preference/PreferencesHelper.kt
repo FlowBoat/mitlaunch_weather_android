@@ -9,18 +9,18 @@ package io.github.flowboat.flowweather.data.preference
 
 import android.content.Context
 import android.preference.PreferenceManager
-import com.f2prateek.rx.preferences2.Preference
 import com.f2prateek.rx.preferences2.RxSharedPreferences
 
-fun <T> Preference<T>.getOrDefault(): T = get() ?: defaultValue()!!
+//fun <T> Preference<T>.getOrDefault(): T = get() ?: defaultValue()!!
+//
+//fun Preference<Boolean>.invert(): Boolean = getOrDefault().let { set(!it); !it }
 
-fun Preference<Boolean>.invert(): Boolean = getOrDefault().let { set(!it); !it }
+private typealias Keys = PreferenceKeys
 
 class PreferencesHelper(val context: Context) {
-
-    val keys = PreferenceKeys(context)
 
     private val prefs = PreferenceManager.getDefaultSharedPreferences(context)
     private val rxPrefs = RxSharedPreferences.create(prefs)
 
+    val currentQuiz = rxPrefs.getStringSet(Keys.quiz_current, emptySet())
 }

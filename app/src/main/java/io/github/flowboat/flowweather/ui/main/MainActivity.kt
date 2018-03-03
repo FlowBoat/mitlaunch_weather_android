@@ -18,6 +18,7 @@ import io.github.flowboat.flowweather.ui.betabase.BetaBaseFragment
 import io.github.flowboat.flowweather.ui.bridgeui.BridgeUIFragment
 import io.github.flowboat.flowweather.ui.datawindow.DWFragment
 import io.github.flowboat.flowweather.ui.home.HomeFragment
+import io.github.flowboat.flowweather.ui.quiz.QuizActivity
 import io.github.flowboat.flowweather.ui.setting.SettingsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
@@ -35,7 +36,6 @@ class MainActivity : BaseActivity() {
     val startScreenId = R.id.nav_drawer_home //TODO Allow customization of this value
 
     override fun onCreate(savedState: Bundle?) {
-        setAppTheme()
         super.onCreate(savedState)
 
         // Do not let the launcher create a new activity
@@ -64,6 +64,10 @@ class MainActivity : BaseActivity() {
                 R.id.nav_drawer_datawindow -> setFragment(DWFragment.newInstance(), id)
                 R.id.nav_drawer_betabase -> setFragment(BetaBaseFragment.newInstance(), id)
                 R.id.nav_drawer_alphabase -> setFragment(AlphaBaseFragment.newInstance(), id)
+                R.id.nav_drawer_quiz -> {
+                    val intent = Intent(this, QuizActivity::class.java)
+                    startActivity(intent)
+                }
                 R.id.nav_drawer_settings -> {
                     val intent = Intent(this, SettingsActivity::class.java)
                     startActivityForResult(intent, REQUEST_OPEN_SETTINGS)
