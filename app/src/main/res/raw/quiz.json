@@ -330,7 +330,7 @@
   {
     "question": "21% of CO2 emissions come from ______",
     "answers": {
-      "Factories and industries": false,
+      "Factories and industries": true,
       "Planes and trains": false,
       "Cows": false,
       "Farms": false
