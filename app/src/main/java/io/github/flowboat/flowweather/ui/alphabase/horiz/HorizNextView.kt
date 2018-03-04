@@ -9,11 +9,20 @@ import android.view.Gravity
 import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import io.github.flowboat.flowweather.ui.alphabase.horiz.next.NextItem
+import io.reactivex.disposables.Disposable
+import io.reactivex.subjects.PublishSubject
 import kotlinx.android.synthetic.main.item_horiz_next.view.*
 
 class HorizNextView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
         ConstraintLayout(context, attrs) {
-    fun onCreate(forward: Boolean) {
+    var forward: Boolean = false
+
+    var jumpSubscription: Disposable? = null
+
+    fun onCreate(forward: Boolean,
+                 subject: PublishSubject<Int>) {
+        this.forward = forward
+
         next_pager.layoutManager = LinearLayoutManager(context).apply {
             orientation = LinearLayoutManager.HORIZONTAL
         }
@@ -51,9 +60,28 @@ class HorizNextView @JvmOverloads constructor(context: Context, attrs: Attribute
             }
         }
 
+        jumpSubscription?.dispose()
+        jumpSubscription = subject.subscribe {
+            scrollToBeginning(false)
+        }
+
+        scrollToBeginning(false)
+    }
+
+    fun scrollToBeginning(smoothScroll: Boolean) {
         // Scroll to last if going backwards
-        if(!forward)
-            next_pager.scrollToPosition(next_pager.adapter.itemCount - 1)
+        val newPos = if(!forward)
+            next_pager.adapter.itemCount - 1
+        else 0
+
+        if(smoothScroll)
+            next_pager.smoothScrollToPosition(newPos)
+        else
+            next_pager.scrollToPosition(newPos)
+    }
+
+    fun onDestroy() {
+        jumpSubscription?.dispose()
     }
 
     companion object {
