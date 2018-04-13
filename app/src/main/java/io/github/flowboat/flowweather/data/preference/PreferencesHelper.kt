@@ -23,4 +23,6 @@ class PreferencesHelper(val context: Context) {
     private val rxPrefs = RxSharedPreferences.create(prefs)
 
     val currentQuiz = rxPrefs.getStringSet(Keys.quiz_current, emptySet())
+
+    val locationCurrent = rxPrefs.getInteger(Keys.location_current, 6176823)
 }

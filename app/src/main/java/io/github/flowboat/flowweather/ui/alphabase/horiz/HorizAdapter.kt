@@ -10,11 +10,11 @@ import io.reactivex.subjects.PublishSubject
 class HorizAdapter(val jumpSubject: PublishSubject<Int>) : ViewStatePagerAdapter() {
     override fun createView(container: ViewGroup, position: Int): View {
         return when(position) {
-            0 -> container.inflate(R.layout.item_horiz_next)
-                    .also { (it as HorizNextView).onCreate(false, jumpSubject) }
-            1 -> container.inflate(R.layout.item_horiz_main)
+//            0 -> container.inflate(R.layout.item_horiz_next)
+//                    .also { (it as HorizNextView).onCreate(false, jumpSubject) }
+            0 -> container.inflate(R.layout.item_horiz_main)
                     .also { (it as HorizMainView).onCreate() }
-            2 -> container.inflate(R.layout.item_horiz_next)
+            1 -> container.inflate(R.layout.item_horiz_next)
                     .also { (it as HorizNextView).onCreate(true, jumpSubject) }
             else -> throw IllegalArgumentException("Invalid position!")
         }
@@ -22,7 +22,8 @@ class HorizAdapter(val jumpSubject: PublishSubject<Int>) : ViewStatePagerAdapter
 
     override fun destroyView(container: ViewGroup?, position: Int, view: View?) {
         (view as? HorizNextView)?.onDestroy()
+        (view as? HorizMainView)?.onDestroy()
     }
 
-    override fun getCount() = 3
+    override fun getCount() = 2
 }

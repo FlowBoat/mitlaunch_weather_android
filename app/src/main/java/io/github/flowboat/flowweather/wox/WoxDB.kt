@@ -89,10 +89,10 @@ object WoxDB {
 
     private fun matchSingleDWState(dw: VolatileDW?, combo: WoxWeatherState) : Boolean {
         if(combo == WoxWeatherState.ANY)
-            return true;
+            return true
 
         if(dw == null)
-            return false;
+            return false
 
         if((dw.precip == PrecipEstimation.DRIZZLE
                         || dw.precip == PrecipEstimation.SHOWER

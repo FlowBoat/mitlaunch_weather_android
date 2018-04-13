@@ -37,5 +37,7 @@
             android:label="Data viewer"
             android:parentActivityName=".ui.main.MainActivity" />
         <activity android:name=".ui.quiz.QuizActivity" />
+        <activity android:name=".ui.alphabase.loc.LocationPickerActivity"
+            android:hardwareAccelerated="false" />
     </application>
 </manifest>

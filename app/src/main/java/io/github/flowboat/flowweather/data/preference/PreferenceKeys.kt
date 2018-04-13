@@ -11,4 +11,6 @@ package io.github.flowboat.flowweather.data.preference
 
 object PreferenceKeys {
     val quiz_current = "quiz_current"
+
+    val location_current = "location_current"
 }

@@ -33,12 +33,12 @@ class AlphaBaseFragment : BaseRxFragment<AlphaBasePresenter>() {
         pager.adapter = HorizAdapter(jumpSubject)
 
         //Scroll master pager to center
-        pager.setCurrentItem(1, false)
+        pager.setCurrentItem(0, false)
     }
 
     fun jumpToToday() {
         //Scroll master pager to center
-        pager.setCurrentItem(1, true)
+        pager.setCurrentItem(0, true)
         //Notify adapter items to jump
         jumpSubject.onNext(0)
     }
